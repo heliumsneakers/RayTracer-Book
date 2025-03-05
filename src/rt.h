@@ -19,7 +19,7 @@ inline double random_double() {
 	return std::rand() / (RAND_MAX + 1.0);
 }
 
-inline double rand_db(double min, double max) {
+inline double rand_db_min_max(double min, double max) {
 	// returns random real in [min, max)
 	return min + (max - min) * random_double();
 }
