@@ -98,6 +98,7 @@ class camera {
 
 		if (world.hit(r, interval(0.001, infinity), rec)) {
 			vec3 dir = rec.normal + rand_on_hemi(rec.normal);
+			// Here the float multiplication is the reflectance. Also known as light absorption. 
 			return 0.5 * ray_color(ray(rec.p, dir), depth - 1, world);
 		}
 
